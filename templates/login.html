@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h5{
+        color: red
+        }
+    </style>
+</head>
+<body>
+    <h1>LOGIN NOW</h1>
+    {% for message in messages %}
+    <h5>{{message}}</h5>
+    {% endfor %}
+
+    <form action="login" method="POST">
+        {%csrf_token%}
+        <p>USERNAME:</p>
+        <input type="text" name="username">
+
+        <p>PASSWORD:</p>
+        <input type="password" name="password">
+        <br>
+
+        <input type="submit">
+    </form>
+    <a href="register">DON'T HAVE AN ACCOUNT YET? SIGNUP</a>
+</body>
+</html>

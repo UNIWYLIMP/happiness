@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SIGNUP</title>
+    <style>
+        h5
+        {
+        color: red
+        }
+    </style>
+</head>
+<body>
+    <h1>
+            SIGN UP BELOW
+    </h1>
+
+    {% for message in messages %}
+    <h5>{{message}}</h5>
+    {% endfor %}
+
+    <form method="POST" action="register">
+        {% csrf_token %}
+        <label>USERNAME</label><br><br>
+        <input type="text" name="username"><br><br>
+
+        <label>EMAIL</label><br><br>
+        <input type="email" name="email"><br><br>
+
+        <label>FIRSTNAME</label><br><br>
+        <input type="text" name="firstname"><br><br>
+
+        <label>LASTNAME</label><br><br>
+        <input type="text" name="lastname"><br><br>
+
+        <label>PASSWORD</label><br><br>
+        <input type="password" name="password"><br><br>
+
+        <label>REPEAT PASSWORD</label><br><br>
+        <input type="password" name="password2"><br>
+
+        <br>
+        <input type="submit">
+
+    </form>
+    <a href="login">HAVE AN ACCOUNT? LOGIN!</a>
+</body>
+</html>

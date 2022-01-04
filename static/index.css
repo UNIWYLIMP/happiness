@@ -1,0 +1,136 @@
+  body
+{
+	padding: 0px;
+	margin: 0px;
+	
+}
+
+.gold
+{
+	color: #EADC91;
+	font-weight: 800;
+}
+
+header
+{
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+    background-image: url("mira_kitchen_img/background_kitchen.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+#first
+{
+	width: 90.5%;
+	height: 10vh;
+	padding: 15px;
+
+}
+
+#logo
+{
+	position: absolute;
+	top: -15px;
+	left: 30px;
+	font-family: sans-serif;
+	font-size:20px;
+	text-align: center;
+	color: white;
+}
+
+#first img
+{
+	width: 12vh;
+	height: 12vh;
+	border: 2px dashed #EADC91;
+	border-radius: 12vh;
+	animation: rotation 5s infinite linear;
+	float: right;
+}
+
+
+@keyframes rotation
+{
+	from{
+		transform: rotate(0deg);
+	}
+	to{
+		transform: rotate(359deg);
+	}
+}
+
+#second
+{
+	display: flex;
+	flex-direction: column;
+	width: 95%;
+	height: 80vh;
+	justify-content: center;
+	align-items: center;
+	text-align: center;	
+	padding: 2.5%;
+}
+
+#second h1
+{
+	color:white;
+	font-family: sans-serif,  fantasy;
+	font-size:100px;
+	font-weight: 800;
+	letter-spacing: 3px;
+	padding: 0;
+	margin: 0;
+	text-shadow: rgb(11, 11, 11) 4px 3px 5px;
+}
+
+#second p
+{
+	font-size: 11px;
+	letter-spacing: 0.5px;
+	color: white;
+	font-family: sans-serif;
+	margin: 0;
+}
+
+#second a
+{ 
+	font-weight: bold;
+	text-decoration: none;
+	color: white;
+	margin-top: 35px;
+	padding: 15px 25px;
+	font-family: sans-serif;
+	border-radius: 23px;
+	font-size: 15px;
+	text-shadow: rgb(11, 11, 11) 4px 3px 5px;
+	background: linear-gradient(45deg, transparent, white);
+	transition: transform 2s, background 2s, color 2s;
+	box-shadow: rgba(110, 110, 110, 1.0) 4px 3px 2px;
+}
+
+#second a:hover
+{
+  background-color: white;
+  text-shadow: rgb(11, 11, 11) 4px 3px 50px;
+  color: black;
+  transform: rotate(360deg);
+
+} 
+
+@media(max-width: 900px)
+{
+	#second h1
+	{
+		font-size:53px;
+	}
+
+	#logo
+{
+	padding: 15px;
+	font-size: 14px;
+}
+}
